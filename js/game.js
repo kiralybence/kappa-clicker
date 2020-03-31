@@ -2,7 +2,9 @@ var points = 0;
 var timer = 60;
 var size = 64;
 var countdown;
-var kappa = document.querySelector("#object");
+var kappa = document.querySelector("#object");//TODO: refactor the name
+var pointsEl = document.querySelector('#points');
+var hitsPerSec = document.querySelector("#hitsPerSec");//TODO: refactor the name
 
 // Generate a random integer
 function random(max) {
@@ -21,12 +23,11 @@ function hitsPerSecond() {
 }
 
 // Event if Kappa is clicked
-$("#object").click(function() {
-	$("#points").html(++points);
-	$("#hitsPerSec").html(hitsPerSecond());
+kappa.addEventListener("click", function () {
+	pointsEl.innerHTML = ""+ ++points;
+	hitsPerSec.innerHTML = hitsPerSecond();
 	pos();
-
-	$("#clickSound")[0].play();
+	document.querySelector("#clickSound").play();
 });
 
 // Event if Start is clicked
