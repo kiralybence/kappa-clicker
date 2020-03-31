@@ -57,6 +57,13 @@ button{
 	margin-left: 10px;
 	width: 90px;
 	height: 30px;
+	cursor: pointer;
+	transition: 300ms;
+}
+
+button:hover {
+	background-color: darkgrey;
+	transition: 300ms;
 }
 
 button img{
