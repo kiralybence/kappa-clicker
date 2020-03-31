@@ -33,7 +33,7 @@ function hitsPerSecond() {
 }
 
 // Event if Kappa is clicked
-kappa.addEventListener("click", function () {
+kappa.addEventListener("click", function() {
 	updateKappa();
 });
 
@@ -51,7 +51,7 @@ function updateKappa() {
 }
 
 // Event if Start is clicked
-startButton.addEventListener("click", function () {
+startButton.addEventListener("click", function() {
 	clearInterval(countdown);
 	pointsEl.innerHTML = "" + (points = 0);
 	timerEl.innerHTML = "" + (timer = 60);
@@ -60,7 +60,7 @@ startButton.addEventListener("click", function () {
 	kappa.style.display = "initial";
 	pos();
 
-	countdown = setInterval(function () {
+	countdown = setInterval(function() {
 		timer--;
 
 		timerEl.innerHTML = timer.toString();
@@ -76,12 +76,12 @@ startButton.addEventListener("click", function () {
 });
 
 // Event if Background is changed
-backgroundControl.addEventListener("change", function () {
+backgroundControl.addEventListener("change", function() {
 	ingame.style.backgroundColor = backgroundControl.value;
 });
 
 // Event if Size is changed
-sizeControl.addEventListener("change", function () {
+sizeControl.addEventListener("change", function() {
 	size = sizeControl.value;
 	kappa.style.width = size + "px";
 	kappa.style.height = size + "px";
@@ -89,7 +89,7 @@ sizeControl.addEventListener("change", function () {
 });
 
 // Event if Reset is clicked
-document.querySelector("#resetButton").addEventListener("click",function(){
+document.querySelector("#resetButton").addEventListener("click", function(){
 	clearInterval(countdown);
 
 	// Scores
