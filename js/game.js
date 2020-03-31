@@ -1,6 +1,6 @@
 var points = 0;
 var timer = 60;
-var size = "64";
+var size = 64;
 var countdown;
 
 function random(max) {
@@ -72,15 +72,15 @@ $("#resetButton").click(function() {
 
 	// Object
 	$("#object").css("display", "none");
-	$("#object").css("width", "64");
-	$("#object").css("height", "64");
+	$("#object").css("width", 64);
+	$("#object").css("height", 64);
 	$("#object").attr("src", "img/kappa.png");
 
 	// Controls
 	$("#ingame").css("background-color", "white");
 	$("#backgroundControl").val("#FFFFFF");
-	$("#sizeControl").val("64");
+	$("#sizeControl").val(64);
 
 	// Variables
-	size = "64";
+	size = 64;
 });
