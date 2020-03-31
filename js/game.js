@@ -3,19 +3,23 @@ var timer = 60;
 var size = 64;
 var countdown;
 
+// Generate a random integer
 function random(max) {
 	return Math.floor((Math.random() * max) + 1);
 }
 
+// Puts Kappa into random position
 function pos() {
 	$("#object").css("left", random(770-size));
 	$("#object").css("top", random(520-size));
 }
 
+// Get hits/second
 function hitsPerSecond() {
 	return (points/(60-timer)).toFixed(2);
 }
 
+// Event if Kappa is clicked
 $("#object").click(function() {
 	$("#points").html(++points);
 	$("#hitsPerSec").html(hitsPerSecond());
@@ -24,6 +28,7 @@ $("#object").click(function() {
 	$("#clickSound")[0].play();
 });
 
+// Event if Start is clicked
 $("#startButton").click(function() {
 	clearInterval(countdown);
 	$("#points").html(points = 0);
@@ -46,10 +51,12 @@ $("#startButton").click(function() {
 	}, 1000);
 });
 
+// Event if Background is changed
 $("#backgroundControl").change(function() {
 	$("#ingame").css("background-color", $(this).val());
 });
 
+// Event if Size is changed
 $("#sizeControl").change(function() {
 size = $(this).val();
 	$("#object").css("width", size);
@@ -57,6 +64,7 @@ size = $(this).val();
 	pos();
 });
 
+// Event if Reset is clicked
 $("#resetButton").click(function() {
 	clearInterval(countdown);
 
