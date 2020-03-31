@@ -18,7 +18,7 @@ document.addEventListener("dragstart", function(event) {
 
 // Generate a random integer
 function random(max) {
-	return Math.floor((Math.random() * max) + 1);
+	return Math.floor(Math.random() * ++max);
 }
 
 // Puts Kappa into random position
