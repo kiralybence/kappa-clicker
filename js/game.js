@@ -7,6 +7,9 @@ var pointsEl = document.querySelector('#points');
 var hitsPerSec = document.querySelector("#hitsPerSec");//TODO: refactor the name
 var startButton = document.querySelector("#startButton");//TODO: refactor the name
 var timerEl = document.querySelector("#timer");//TODO: refactor the name
+var backgroundControl = document.querySelector("#backgroundControl");//TODO: refactor the name
+var ingame = document.querySelector("#ingame");//TODO: refactor the name
+var sizeControl = document.querySelector("#sizeControl");//TODO: refactor the name
 
 // Generate a random integer
 function random(max) {
@@ -57,43 +60,44 @@ startButton.addEventListener("click", function () {
 });
 
 // Event if Background is changed
-$("#backgroundControl").change(function() {
-	$("#ingame").css("background-color", $(this).val());
+backgroundControl.addEventListener("change", function () {
+	ingame.style.backgroundColor = backgroundControl.value;
 });
 
 // Event if Size is changed
-$("#sizeControl").change(function() {
-	size = $(this).val();
-	$("#object").css("width", size);
-	$("#object").css("height", size);
+sizeControl.addEventListener("change", function () {
+	size = sizeControl.value;
+	kappa.style.width = size + "px";
+	kappa.style.height = size + "px";
 	pos();
 });
 
 // Event if Reset is clicked
-$("#resetButton").click(function() {
+document.querySelector("#resetButton").addEventListener("click",function(){
 	clearInterval(countdown);
 
 	// Scores
-	$("#points").html(points = 0);
-	$("#timer").html(timer = 60);
-	$("#hitsPerSec").html("0.00");
-	$("#hit").attr("src", "img/kappa.png");
+	pointsEl.innerHTML = "" + (points = 0);
+	timerEl.innerHTML = "" + (timer = 60);
+	hitsPerSec.innerHTML = "0.00";
+	document.querySelector("#hit").setAttribute("src", "img/kappa.png");
 
 	// Buttons
-	$("#startButton").html("Start");
-	$("#startButton").css("display", "inline");
+	startButton.innerHTML = "Start";
+	startButton.style.display = "inline";
 
 	// Object
-	$("#object").css("display", "none");
-	$("#object").css("width", 64);
-	$("#object").css("height", 64);
-	$("#object").attr("src", "img/kappa.png");
+	kappa.style.display = "none";
+	kappa.style.width = "64px";
+	kappa.style.height = "64px";
+	kappa.setAttribute("src", "img/kappa.png");
 
 	// Controls
-	$("#ingame").css("background-color", "white");
-	$("#backgroundControl").val("#FFFFFF");
-	$("#sizeControl").val(64);
+	ingame.style.backgroundColor = "white";
+	backgroundControl.value = "#FFFFFF";
+	sizeControl.value = 64;
 
 	// Variables
 	size = 64;
 });
+
