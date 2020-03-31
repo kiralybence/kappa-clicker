@@ -29,7 +29,7 @@ function pos() {
 
 // Get hits/second
 function hitsPerSecond() {
-	return (points/(60-timer)).toFixed(2);
+	return (points/(60-timer+1)).toFixed(2);
 }
 
 // Event if Kappa is clicked
@@ -61,16 +61,18 @@ startButton.addEventListener("click", function () {
 	pos();
 
 	countdown = setInterval(function () {
-		if(timer > 0){
-			timerEl.innerHTML = "" + --timer; // what is this ಠ_ಠ some sort of integer to string conversion?
+		timer--;
+		
+		if (timer > 0) {
+			timerEl.innerHTML = timer.toString();
 			hitsPerSec.innerHTML = hitsPerSecond();
-		}else{
+		} else {
 			startButton.innerHTML = "Start";
 			kappa.style.display = "none";
 			document.querySelector("#endSound").play();
 			clearInterval(countdown);
 		}
-	},1000);
+	}, 1000);
 });
 
 // Event if Background is changed
