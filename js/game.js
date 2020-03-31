@@ -72,30 +72,31 @@ sizeControl.addEventListener("change", function () {
 });
 
 // Event if Reset is clicked
-$("#resetButton").click(function() {
+document.querySelector("#resetButton").addEventListener("click",function(){
 	clearInterval(countdown);
 
 	// Scores
-	$("#points").html(points = 0);
-	$("#timer").html(timer = 60);
-	$("#hitsPerSec").html("0.00");
-	$("#hit").attr("src", "img/kappa.png");
+	pointsEl.innerHTML = "" + (points = 0);
+	timerEl.innerHTML = "" + (timer = 60);
+	hitsPerSec.innerHTML = "0.00";
+	document.querySelector("#hit").setAttribute("src", "img/kappa.png");
 
 	// Buttons
-	$("#startButton").html("Start");
-	$("#startButton").css("display", "inline");
+	startButton.innerHTML = "Start";
+	startButton.style.display = "inline";
 
 	// Object
-	$("#object").css("display", "none");
-	$("#object").css("width", 64);
-	$("#object").css("height", 64);
-	$("#object").attr("src", "img/kappa.png");
+	kappa.style.display = "none";
+	kappa.style.width = "64px";
+	kappa.style.height = "64px";
+	kappa.setAttribute("src", "img/kappa.png");
 
 	// Controls
-	$("#ingame").css("background-color", "white");
-	$("#backgroundControl").val("#FFFFFF");
-	$("#sizeControl").val(64);
+	ingame.style.backgroundColor = "white";
+	backgroundControl.value = "#FFFFFF";
+	sizeControl.value = 64;
 
 	// Variables
 	size = 64;
 });
+
