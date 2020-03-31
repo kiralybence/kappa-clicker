@@ -37,6 +37,7 @@ body{
 	margin: 0 auto;
 	width: 770px;
 	height: 520px;
+	box-shadow: inset 0 0 5px black;
 }
 
 #object{
