@@ -28,13 +28,23 @@ function hitsPerSecond() {
 }
 
 // Event if Kappa is clicked
-// TODO: updateKappa() function that gets called on "click" and "dragstart" event
 kappa.addEventListener("click", function () {
+	updateKappa();
+});
+
+// Event if Kappa is dragged
+kappa.addEventListener("dragstart", function(event) {
+	event.preventDefault();
+	updateKappa();
+})
+
+// Update Kappa's position
+function updateKappa() {
 	pointsEl.innerHTML = "" + ++points;
 	hitsPerSec.innerHTML = hitsPerSecond();
 	pos();
 	document.querySelector("#clickSound").play();
-});
+}
 
 // Event if Start is clicked
 startButton.addEventListener("click", function () {
