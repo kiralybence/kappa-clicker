@@ -62,11 +62,11 @@ startButton.addEventListener("click", function () {
 
 	countdown = setInterval(function () {
 		timer--;
+
+		timerEl.innerHTML = timer.toString();
+		hitsPerSec.innerHTML = hitsPerSecond();
 		
-		if (timer > 0) {
-			timerEl.innerHTML = timer.toString();
-			hitsPerSec.innerHTML = hitsPerSecond();
-		} else {
+		if (timer == 0) {
 			startButton.innerHTML = "Start";
 			kappa.style.display = "none";
 			document.querySelector("#endSound").play();
