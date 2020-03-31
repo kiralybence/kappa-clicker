@@ -62,7 +62,7 @@ startButton.addEventListener("click", function () {
 
 	countdown = setInterval(function () {
 		if(timer > 0){
-			timerEl.innerHTML = "" + --timer;
+			timerEl.innerHTML = "" + --timer; // what is this ಠ_ಠ some sort of integer to string conversion?
 			hitsPerSec.innerHTML = hitsPerSecond();
 		}else{
 			startButton.innerHTML = "Start";
