@@ -2,14 +2,14 @@ var points = 0;
 var timer = 60;
 var size = 64;
 var countdown;
-var kappa = document.querySelector("#object");//TODO: refactor the name
+var kappa = document.querySelector("#object"); // TODO: refactor the name
 var pointsEl = document.querySelector('#points');
-var hitsPerSec = document.querySelector("#hitsPerSec");//TODO: refactor the name
-var startButton = document.querySelector("#startButton");//TODO: refactor the name
-var timerEl = document.querySelector("#timer");//TODO: refactor the name
-var backgroundControl = document.querySelector("#backgroundControl");//TODO: refactor the name
-var ingame = document.querySelector("#ingame");//TODO: refactor the name
-var sizeControl = document.querySelector("#sizeControl");//TODO: refactor the name
+var hitsPerSec = document.querySelector("#hitsPerSec"); // TODO: refactor the name
+var startButton = document.querySelector("#startButton"); // TODO: refactor the name
+var timerEl = document.querySelector("#timer"); // TODO: refactor the name
+var backgroundControl = document.querySelector("#backgroundControl"); // TODO: refactor the name
+var ingame = document.querySelector("#ingame"); // TODO: refactor the name
+var sizeControl = document.querySelector("#sizeControl"); // TODO: refactor the name
 
 // Disable dragging of elements
 document.addEventListener("dragstart", function(event) {
@@ -89,7 +89,7 @@ sizeControl.addEventListener("change", function() {
 });
 
 // Event if Reset is clicked
-document.querySelector("#resetButton").addEventListener("click", function(){
+document.querySelector("#resetButton").addEventListener("click", function() {
 	clearInterval(countdown);
 
 	// Scores
