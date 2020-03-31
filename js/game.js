@@ -11,6 +11,11 @@ var backgroundControl = document.querySelector("#backgroundControl");//TODO: ref
 var ingame = document.querySelector("#ingame");//TODO: refactor the name
 var sizeControl = document.querySelector("#sizeControl");//TODO: refactor the name
 
+// Disable dragging of elements
+document.addEventListener("dragstart", function(event) {
+	event.preventDefault();
+});
+
 // Generate a random integer
 function random(max) {
 	return Math.floor((Math.random() * max) + 1);
@@ -35,11 +40,6 @@ kappa.addEventListener("click", function () {
 // Event if Kappa is dragged
 kappa.addEventListener("dragstart", function() {
 	updateKappa();
-});
-
-// Disable dragging of elements
-document.addEventListener("dragstart", function(event) {
-	event.preventDefault();
 });
 
 // Update Kappa's position
