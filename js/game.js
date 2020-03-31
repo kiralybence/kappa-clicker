@@ -107,8 +107,8 @@ document.querySelector("#resetButton").addEventListener("click",function(){
 	kappa.setAttribute("src", "img/kappa.png");
 
 	// Controls
-	ingame.style.backgroundColor = "white";
-	backgroundControl.value = "#FFFFFF";
+	ingame.style.backgroundColor = "#24272d";
+	backgroundControl.value = "#24272d";
 	sizeControl.value = 64;
 
 	// Variables
