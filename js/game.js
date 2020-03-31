@@ -62,7 +62,7 @@ startButton.addEventListener("click", function () {
 
 	countdown = setInterval(function () {
 		if(timer > 0){
-			timerEl.innerHTML = "" + --timer
+			timerEl.innerHTML = "" + --timer;
 			hitsPerSec.innerHTML = hitsPerSecond();
 		}else{
 			startButton.innerHTML = "Start";
