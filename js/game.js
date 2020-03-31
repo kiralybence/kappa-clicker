@@ -9,6 +9,7 @@ var startButton = document.querySelector("#startButton");//TODO: refactor the na
 var timerEl = document.querySelector("#timer");//TODO: refactor the name
 var backgroundControl = document.querySelector("#backgroundControl");//TODO: refactor the name
 var ingame = document.querySelector("#ingame");//TODO: refactor the name
+var sizeControl = document.querySelector("#sizeControl");//TODO: refactor the name
 
 // Generate a random integer
 function random(max) {
@@ -63,10 +64,10 @@ backgroundControl.addEventListener("change", function () {
 });
 
 // Event if Size is changed
-$("#sizeControl").change(function() {
-	size = $(this).val();
-	$("#object").css("width", size);
-	$("#object").css("height", size);
+sizeControl.addEventListener("change", function () {
+	size = sizeControl.value;
+	kappa.style.width = size + "px";
+	kappa.style.height = size + "px";
 	pos();
 });
 
