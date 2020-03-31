@@ -25,6 +25,7 @@ function hitsPerSecond() {
 }
 
 // Event if Kappa is clicked
+// TODO: updateKappa() function that gets called on "click" and "dragstart" event
 kappa.addEventListener("click", function () {
 	pointsEl.innerHTML = "" + ++points;
 	hitsPerSec.innerHTML = hitsPerSecond();
