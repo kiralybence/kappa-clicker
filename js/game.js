@@ -58,7 +58,7 @@ $("#backgroundControl").change(function() {
 
 // Event if Size is changed
 $("#sizeControl").change(function() {
-size = $(this).val();
+	size = $(this).val();
 	$("#object").css("width", size);
 	$("#object").css("height", size);
 	pos();
