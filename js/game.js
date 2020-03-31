@@ -33,10 +33,14 @@ kappa.addEventListener("click", function () {
 });
 
 // Event if Kappa is dragged
-kappa.addEventListener("dragstart", function(event) {
-	event.preventDefault();
+kappa.addEventListener("dragstart", function() {
 	updateKappa();
-})
+});
+
+// Disable dragging of elements
+document.addEventListener("dragstart", function(event) {
+	event.preventDefault();
+});
 
 // Update Kappa's position
 function updateKappa() {
