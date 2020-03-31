@@ -7,6 +7,8 @@ var pointsEl = document.querySelector('#points');
 var hitsPerSec = document.querySelector("#hitsPerSec");//TODO: refactor the name
 var startButton = document.querySelector("#startButton");//TODO: refactor the name
 var timerEl = document.querySelector("#timer");//TODO: refactor the name
+var backgroundControl = document.querySelector("#backgroundControl");//TODO: refactor the name
+var ingame = document.querySelector("#ingame");//TODO: refactor the name
 
 // Generate a random integer
 function random(max) {
@@ -56,8 +58,8 @@ startButton.addEventListener("click", function () {
 });
 
 // Event if Background is changed
-$("#backgroundControl").change(function() {
-	$("#ingame").css("background-color", $(this).val());
+backgroundControl.addEventListener("change", function () {
+	ingame.style.backgroundColor = backgroundControl.value;
 });
 
 // Event if Size is changed
