@@ -2,6 +2,7 @@ var points = 0;
 var timer = 60;
 var size = 64;
 var countdown;
+var kappa = document.querySelector("#object");
 
 // Generate a random integer
 function random(max) {
@@ -10,8 +11,8 @@ function random(max) {
 
 // Puts Kappa into random position
 function pos() {
-	$("#object").css("left", random(770-size));
-	$("#object").css("top", random(520-size));
+	kappa.style.left = random(770-size)+"px";
+	kappa.style.top = random(520-size)+"px";
 }
 
 // Get hits/second
