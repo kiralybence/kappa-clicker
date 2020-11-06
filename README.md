@@ -1,1 +1,3 @@
-# kappa-clicker
+# Kappa Clicker
+
+Click the Kappa.
