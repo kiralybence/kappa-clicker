@@ -132,8 +132,10 @@ function endGame() {
     // Stop the countdown
     clearInterval(countdown);
 
-    // Reset start button
+    // Reset buttons
     startButton.innerHTML = 'Start';
+
+    // Make Kappa disappear
     kappa.style.display = 'none';
 
     // Play the ending sound
