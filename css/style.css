@@ -44,6 +44,12 @@ body {
 	padding-right: 15px;
 }
 
+#smallKappaIcon {
+	vertical-align: middle;
+	height: 25px;
+	margin-bottom: 5px;
+}
+
 #ingame {
 	background-color: #24272d;
 	border-radius: 7px;
