@@ -1,90 +1,90 @@
 * {
-	user-select: none; /* Chrome, Opera */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-o-user-select: none; /* Internet Explorer, Edge */
+    user-select: none; /* Chrome, Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -o-user-select: none; /* Internet Explorer, Edge */
 }
 
 body {
-	background-color: #21252b;
-	font-family: Verdana, sans-serif;
-	color: white;
-	margin: 0;
-	padding: 0;
+    background-color: #21252b;
+    font-family: Verdana, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
-	width: 100%;
-	height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 
 #game {
-	background-color: #282c34;
-	border: 1px solid black;
-	border-radius: 7px;
-	width: 800px;
-	height: 600px;
-	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    background-color: #282c34;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 800px;
+    height: 600px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 .vertical-center {
-	margin: 0 auto;
-	position: relative;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #scorebar, #controls {
-	width: 770px;
-	height: 40px;
-	line-height: 40px;
-	padding-left: 15px;
-	padding-right: 15px;
+    width: 770px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #smallKappaIcon {
-	vertical-align: middle;
-	height: 25px;
-	margin-bottom: 5px;
+    vertical-align: middle;
+    height: 25px;
+    margin-bottom: 5px;
 }
 
 #ingame {
-	background-color: #24272d;
-	border-radius: 7px;
-	margin: 0 auto;
-	width: 770px;
-	height: 520px;
-	box-shadow: inset 0 0 5px black;
+    background-color: #24272d;
+    border-radius: 7px;
+    margin: 0 auto;
+    width: 770px;
+    height: 520px;
+    box-shadow: inset 0 0 5px black;
 }
 
 #object {
-	width: 64px;
-	height: 64px;
-	position: relative;
-	display: none;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    display: none;
 }
 
 button {
-	background-color: lightgrey;
-	border: 1px solid black;
-	border-radius: 5px;
-	outline: none;
-	float: right;
-	margin-top: 5px;
-	margin-left: 10px;
-	width: 90px;
-	height: 30px;
-	cursor: pointer;
-	transition: 300ms;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    transition: 300ms;
 }
 
 button:hover {
-	background-color: darkgrey;
-	transition: 300ms;
+    background-color: darkgrey;
+    transition: 300ms;
 }
 
 audio {
-	display: none;
+    display: none;
 }
