@@ -157,7 +157,7 @@ kappa.addEventListener('dragstart', function() {
     updateKappa();
 });
 
-// Event if Start button is clicked
+// Event if start button is clicked
 startButton.addEventListener('click', function() {
     startGame();
 });
